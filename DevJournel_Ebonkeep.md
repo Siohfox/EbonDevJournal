@@ -151,7 +151,7 @@ Feedback to how it was
 
 Lots of words about the boss AI 
 
-![Initial Image](https://raw.githubusercontent.com/EbonDevJournal/refs/heads/main/Screenshots/QuickTimeWallLogicWithPuzzles.jpg)
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg?token=GHSAT0AAAAAADDQCPCCMRENUG2MEP4FVS4Q2A4BTEA)
 
 
 #### TBD
