@@ -129,22 +129,78 @@ By analyzing these titles, I was able to identify key elements that contribute t
 
 #### Gameplay Loop
 
-Words
+The core gameplay loop of Ebonkeep revolves around a mixture of stealth, exploration, and high-stakes combat. The loop is designed to gradually increase in intensity as the player progresses through the castle grounds.
+
+1. Infiltration Phase – Players begin outside the castle and must avoid detection by patrolling guards, using stealth and cover to sneak through courtyards and halls. They can eliminate enemies silently or avoid them entirely.
+
+2. Exploration and Upgrades – As players navigate the environment, they are encouraged to explore alternate paths and hidden rooms to discover upgrades such as increased crossbow damage, speed boosts, or health regeneration items.
+
+3. Combat Encounters – As the difficulty ramps up, players engage in more frequent combat situations where stealth is no longer a viable option. The player must use their upgraded abilities to defeat tougher enemies.
+
+4. Boss Fight – The final stage of the loop culminates in a challenging boss fight against a massive golem named Steve (name still TBD). This battle tests all of the player’s skills, from dodging and timing to weapon use and spatial awareness.
+
+5. Victory and Reflection – Upon defeating the boss, the game ends with a short cinematic and victory screen, rewarding players for their journey and effort.
+
+This loop creates a satisfying balance of tension and release, gradually increasing stakes while giving players opportunities to prepare and adapt.
 
 #### Code and Blueprint Naming Conventions and Design
 
-Words about how things should be named and such
+To maintain clarity and consistency across the development team, we adopted conventions based on Allar's UE5 Style Guide. This helped ensure that all Blueprints, variables, and assets were readable and easily traceable by any team member.
 
+Key naming standards included:
+
+- BP_ prefix for all Blueprints (e.g., BP_Guard, BP_BossGolem)
+
+- FX_ for Niagara systems (FX_Explosion, FX_Smoke)
+
+- UI_ for interface elements (UI_HealthBar, UI_MainMenu)
+
+- SM_ / SK_ for static and skeletal meshes (e.g., SM_CastleWall, SK_Golem)
+
+- CamelCase for variables (PlayerHealth, AttackCooldown)
+
+- VerbNoun format for functions (UpdateHealthBar, TriggerAlarm)
+
+Using these conventions improved readability, eased debugging, and made it easier for new team members to understand and work with the project files.
 ref: https://github.com/Allar/ue5-style-guide
 
 #### Creating game
 
 ##### Initial implementation
-Words about how it was initially made
+Initially, we started with a basic third-person template provided by Unreal Engine 5.4. The goal was to rapidly prototype the core mechanics: player movement, crossbow shooting, and basic enemy detection.
+
+We incrementally built in features such as:
+
+1. A simple stealth system using trigger volumes and AI sight perception
+
+2. Guard AI patrol paths using spline-based movement
+
+3. Crossbow weapon functionality using line traces and damage values
+
+4. Placeholder power-ups to represent future upgrade mechanics
+
+The early versions were very unfinished, but served as a strong testbed to iterate on gameplay mechanics and gauge how sneaking around and combat would mesh.
+Feedback
+
+After internal testing and feedback from peers and mentors, we received several useful critiques:
+
+- Stealth Mechanics were too simplistic. Guards didn’t have dynamic responses and behaved predictably, making it too easy to bypass them.
+
+- Player Movement felt stiff and lacked polish, especially when transitioning between aiming and movement.
+
+- Visual Feedback was unclear — hits didn’t feel impactful, and it was hard to read enemy behaviors.
+
+Based on this, we prioritized improving AI responsiveness, added visual effects for shooting and stealth detection, and refined the animation transitions for smoother controls. The feedback loop was vital in shaping a more cohesive and engaging experience.
 
 ##### Feedback
 
-Feedback to how it was
+After internal testing and feedback from peers and mentors, we received useful critiques:
+
+Feedback 1:
+"The aiming for the crossbow sights was bad and didn't improve much"
+- anonymous tester
+Response:
+We attempted to adjust it so you could aim down the sight more and made it easier to move. It still doesn't feel perfect.
 
 
 #### AI design
