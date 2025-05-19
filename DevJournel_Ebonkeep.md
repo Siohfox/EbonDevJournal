@@ -192,6 +192,25 @@ After internal testing and feedback from peers and mentors, we received several 
 
 Based on this, we prioritized improving AI responsiveness, added visual effects for shooting and stealth detection, and refined the animation transitions for smoother controls. The feedback loop was vital in shaping a more cohesive and engaging experience.
 
+##### Creating the shooting
+As the person in charge of creating the character with shooting mechanics, i decided to use a line trace to trace where the player would shoot.
+
+In figure F and G, I used a raycast, or a Line trace as it's referred to in Unreal, to trace from the camera to the crosshair. I did this so the player could shoot at the crosshair, and it seemed like the simplest way for me, who has never programmed a shooting mechanic before. After seeing it the ray hit something or not, I would trace another line from the crossbow to the hit point of the crosshair linetrace. This resulted in a crossover point where the two lines meet, and would allow the bullets to come from the crossbow the player held, instead of the center of the screen.
+
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting1.png?token=GHSAT0AAAAAADEFH2XWDNUACYWD2T6JLALW2BLR32A)
+Figure F: A third person view of a shot made, showing the line trace from the crosshair to the hit point
+
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting2.png?token=GHSAT0AAAAAADEFH2XX3RATILR7RJZCPDX62BLS6TA)
+Figure G: An alternate view, to see the line trace from both the weapon and the camera, to decide which point the crossbow should shoot towards
+
+##### Adding arrow stab
+
+Since we're using a crossbow as our main form of attack, I decided to implement a feature where the arrows appear to stick into walls and targets.
+
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/arrow_stab.png?token=GHSAT0AAAAAADEFH2XWVLAQ3M32W4RF25J62BLT5PQ)
+Figure H: An image showing arrows sticking into the wall after implementation.
+
+
 ##### Feedback
 
 After internal testing and feedback from peers and mentors, we received useful critiques:
@@ -202,24 +221,56 @@ Feedback 1:
 Response:
 We attempted to adjust it so you could aim down the sight more and made it easier to move. It still doesn't feel perfect.
 
+Feedback 2:
+"There's not much feedback for being hit or hitting an enemy"
+- anonymous tester
+Response:
+We intend to implement a flashing red enemy mechanic, or introduce a stagger animation, but we likely do not have enough time.
+
+Feedback 3:
+"The movement feels unfun"
+- anonymous tester
+Response:
+We need to add better movement, if we have time.
+
+Feedback 4:
+"The crosshair and UI looks bad and covers the screen"
+- anonymous tester
+Response:
+We updated the crosshair to look visually better, and created some borders for the UI elements such as the health bars, adding a name for the boss too.
+
+
+
 
 #### AI design
 
-Lots of words about the boss AI 
-
-![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg?token=GHSAT0AAAAAADDQCPCCMRENUG2MEP4FVS4Q2A4BTEA)
+Creating the boss AI was a complex but rewarding part, and was my main part. The boss, later named as The Fallen One, was designed to feel like a powerful and intimidating presence within the castle keep. Initially designed to be 12 times the player height, we ended up sticking to that and keeping it large and intimidating.
 
 
-#### TBD
 
+I used a blackboard and behaviour tree to simulate the AI behaviour of the boss.
+To create the boss I used 3 separate classes:
+1. I used a normal blueprint **"BP_Boss"** to include the boss model, health, and other important mechanics.
+2. I used an AI class, a blueprint class derived from an AI actor built into unreal, and named it **BP_AI_Boss**. Since BP_Boss was a child of the character class, it allowed me to add an AI Controller class such as this one under the pawn dropdown in the details panel. This is what would "Control" the boss.
+3. The final part was the **Blackboard** and **Behaviour Tree**, which I named, which i've bundled into one for clarity's sake. The blackboard was created as BB_Boss, and contained important stats, such as a linked health amount with the BP_Boss, and some other useful booleans that the blackboard could track such as testing whether it was dead, if the blackboard itself is enabled, and if it is seeing any target- however for this game sight was not necessary as it is implied the boss can always see the player. The BT_Boss behaviour tree was used to decide what action the boss should take next by checking the blackboard and using what Unreal calls "Sequences"
 
-### TBD
+##### Research into Unreal's Behaviour Tree system 
 
-### TBD
+As I embarked on developing AI for our game, Ebonkeep, I delved into Unreal Engine's Behaviour Tree system to structure complex decision-making processes for non-player characters (NPCs). This system allows for modular and hierarchical AI behavior design, which was essential for implementing both stealthy guards and the dynamic boss character.
 
-### Additional Implemented/Unimplemented Feedback
+In my exploration, I focused on understanding the core components of Behaviour Trees: Selectors, Sequences, and Simple Parallel nodes.
 
-Words
+1. Selectors: These nodes evaluate their child nodes from left to right and execute the first one that succeeds. If a child node fails, the Selector moves on to the next. This structure is ideal for fallback behaviors. For instance, if a guard loses sight of the player, the AI can switch from a chase behavior to a search routine (Epic Games, 2025a).
+
+2. Sequences: Sequence nodes execute their child nodes in order, proceeding only if each child succeeds. If any child fails, the entire sequence fails. This is useful for chaining dependent actions, such as a boss character preparing an attack, executing it, and then returning to an idle state (Epic Games, 2025a).
+
+3. Simple Parallel: This node allows for concurrent execution of a main task and a background task. For example, while a boss character charges a powerful attack (main task), it can simultaneously track the player's position (background task). This structure is particularly useful for creating more lifelike and responsive AI behaviors (Epic Games, 2025b).
+
+To deepen my understanding, I consulted Unreal Engine's official documentation, which provided comprehensive guides and examples on implementing these nodes effectively (Epic Games, 2025c). Additionally, I found video tutorials, such as the one by Mathew Wadstein on Simple Parallel nodes, to be helpful in these concepts, although the tutorial was in Unreal 4 back in 2016 9 years ago from now, it was still helpful and translatable to modern systems that Unreal still uses. (Wadstein, 2016).
+
+Through this research, I was able to construct AI behaviors that are both modular and scalable, enhancing the gameplay experience by providing challenging and intelligent adversaries.
+
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg?token=GHSAT0AAAAAADEFH2XXJ4VOMRT5G5BULBOY2BLQ3HA)
 
 ## Critical Reflection
 
@@ -230,6 +281,16 @@ Words
 ### What would you do differently next time?
 
 Words
+
+## Bibliography
+
+Epic Games (2025a) Unreal Engine Behavior Tree Node Reference: Composites. Available at: [https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-behavior-tree-node-reference-composites](https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-behavior-tree-node-reference-composites) (Accessed: 24 Jan 2025).
+
+Epic Games (2025b) Behavior Tree in Unreal Engine - Overview. Available at: [https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-tree-in-unreal-engine---overview](https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-tree-in-unreal-engine---overview) (Accessed: 25 Jan 2025).
+
+Epic Games (2025c) Behavior Trees in Unreal Engine. Available at: [https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-trees-in-unreal-engine](https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-trees-in-unreal-engine) (Accessed: 30 Jan 2025).
+
+Wadstein, M. (2016) WTF Is? AI: Simple Parallel Node in Unreal Engine 4 (UE4). Available at: [https://www.youtube.com/watch?v=idejwkR4Vcc](https://www.youtube.com/watch?v=idejwkR4Vcc) (Accessed: 4 Feb 2025).
 
 ## Declared Assets
 
