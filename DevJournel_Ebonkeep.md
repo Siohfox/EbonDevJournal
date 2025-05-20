@@ -276,11 +276,17 @@ Through this research, I was able to construct AI behaviors that are both modula
 
 ### What did or did not work well and why?
 
-Words
+Embarking on the development of Project Ebonkeep presented a series of challenges and learning opportunities. Transitioning from Unity to Unreal Engine 5.4 was initially difficult, especially given my limited experience with Unreal's architecture. However, the engine's robust documentation and community tutorials facilitated a smoother adaptation process.
+
+One of the standout successes was the implementation of the AI Behavior Tree system. Leveraging Unreal's Behavior Trees allowed for modular and scalable AI behaviors, which were instrumental in creating dynamic enemy interactions. The use of Selectors and Sequences enabled the design of complex decision-making processes for NPCs, enhancing gameplay depth (Epic Games, 2025a).
+
+Integrating the AI Perception system further enriched the AI's responsiveness. By configuring senses such as sight and hearing, NPCs could react more naturally to the player's actions, creating a more immersive experience (Epic Games, 2025b).
+
+However, not all aspects proceeded smoothly. The initial setup of the AI systems was time-consuming, with challenges arising from understanding the intricacies of Behavior Trees and Perception components. Debugging AI behaviors required meticulous attention, as minor misconfigurations could lead to erratic NPC actions. Additionally, while the visual scripting through Blueprints was powerful, it occasionally became complex to manage, especially when dealing with extensive AI logic.
 
 ### What would you do differently next time?
 
-Words
+Reflecting on the development process, I can already find areas to improve. Firstly, time planning and casualty planning could have been much better, we found a lot of group changes happened which stunted the development of the project. In the future, i should be prepared for this and get work done faster to compensate. Early-stage prototypes could help identify potential pitfalls in AI behavior and system integration, allowing for timely adjustments.
 
 ## Bibliography
 
