@@ -192,6 +192,19 @@ After internal testing and feedback from peers and mentors, we received several 
 
 Based on this, we prioritized improving AI responsiveness, added visual effects for shooting and stealth detection, and refined the animation transitions for smoother controls. The feedback loop was vital in shaping a more cohesive and engaging experience.
 
+##### Software Failures
+
+Throughout working as a team in the project, I experienced many issues with the softwares. Notably, we were held back by github not being able to store much in terms of objects. Since Unreal engine has very large files often, this was a problem for us. We set the project up as LFS, only to learn that it has a "Bandwidth" of 1Gb. This practically meant, with the way we first set it up, that only one person could download the project and make changes once before we hit the monthly quota.
+This was undoubtably frustrating, and took us at least 2 weeks to get properly working before any of us could properly engage in the project.
+So in other words:
+Problem: LFS needed, github has a small amount
+Solution: We had someone who was paying for the LFS set it up, and found a solution of dividing the project into Statics and Dynamics to help save space on both sides. This solution was not flawless, but it allowed the project to finally work on github, and satisfied the 3 months of work we needed to do.
+
+Another issue we had was that Unreal 5.4 had many issues with loading C++ projects on various devices. It was difficult to figure out what exactly it wanted, and it kept saying "Cannot build source files, try rebuilding manually". In the end, we found a page (Unreal Engine 5: How To Recover Files "Could not compile. Try rebuilding from source manually.")
+
+
+
+
 ##### Creating the shooting
 As the person in charge of creating the character with shooting mechanics, i decided to use a line trace to trace where the player would shoot.
 
@@ -240,12 +253,9 @@ Response:
 We updated the crosshair to look visually better, and created some borders for the UI elements such as the health bars, adding a name for the boss too.
 
 
-
-
 #### AI design
 
 Creating the boss AI was a complex but rewarding part, and was my main part. The boss, later named as The Fallen One, was designed to feel like a powerful and intimidating presence within the castle keep. Initially designed to be 12 times the player height, we ended up sticking to that and keeping it large and intimidating.
-
 
 
 I used a blackboard and behaviour tree to simulate the AI behaviour of the boss.
@@ -272,6 +282,15 @@ Through this research, I was able to construct AI behaviors that are both modula
 
 ![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg?token=GHSAT0AAAAAADEFH2XXJ4VOMRT5G5BULBOY2BLQ3HA)
 
+#### Niagara VFX
+
+As part of our group project, I took on the task of creating visual effects using Unreal Engine's Niagara system. Being new to Niagara, I began by enabling the plugin in Unreal Engine 5.4 and exploring the basic interface. I found the official documentation particularly helpful, especially the Quick Start guide, which walked me through creating simple effects like smoke and sparks.
+
+I ended up using niagara for a few parts of the project, namely the boss slam effects, arena particle effects, and a test fire particle which was not implemented in the end demo.
+
+![ShockwaveFx here]()
+
+
 ## Critical Reflection
 
 ### What did or did not work well and why?
@@ -282,11 +301,15 @@ One of the standout successes was the implementation of the AI Behavior Tree sys
 
 Integrating the AI Perception system further enriched the AI's responsiveness. By configuring senses such as sight and hearing, NPCs could react more naturally to the player's actions, creating a more immersive experience (Epic Games, 2025b).
 
-However, not all aspects proceeded smoothly. The initial setup of the AI systems was time-consuming, with challenges arising from understanding the intricacies of Behavior Trees and Perception components. Debugging AI behaviors required meticulous attention, as minor misconfigurations could lead to erratic NPC actions. Additionally, while the visual scripting through Blueprints was powerful, it occasionally became complex to manage, especially when dealing with extensive AI logic.
+However, not all aspects proceeded smoothly. The initial setup of the AI systems was time-consuming, with challenges arising from understanding the intricacies of Behavior Trees and Perception components. Debugging AI behaviors required a lot of attention, as minor misconfigurations could lead to erratic NPC actions. Additionally, while the visual scripting through Blueprints was powerful, it occasionally became complex to manage, especially when dealing with extensive AI logic.
+
+A very important reflection was that the movement system used was very janky, and is not something i'd recommend. We made the character move a bit like a Fortnite third person shooter character, and it just feels bad to use. If I had more time, i would love to introduce a proper movement system to the game.
 
 ### What would you do differently next time?
 
 Reflecting on the development process, I can already find areas to improve. Firstly, time planning and casualty planning could have been much better, we found a lot of group changes happened which stunted the development of the project. In the future, i should be prepared for this and get work done faster to compensate. Early-stage prototypes could help identify potential pitfalls in AI behavior and system integration, allowing for timely adjustments.
+
+I would love to use a better movement system, and allocate more time into the character, even if it wasn't my main goal.
 
 ## Bibliography
 
@@ -298,9 +321,18 @@ Epic Games (2025c) Behavior Trees in Unreal Engine. Available at: [https://dev.e
 
 Wadstein, M. (2016) WTF Is? AI: Simple Parallel Node in Unreal Engine 4 (UE4). Available at: [https://www.youtube.com/watch?v=idejwkR4Vcc](https://www.youtube.com/watch?v=idejwkR4Vcc) (Accessed: 4 Feb 2025).
 
+Creating visual effects in Niagara: https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine (Accessed: 19 Feb 2025).
+
+Pitchfork Academy (Youtube) How To Make A Third Person Shooter - Unreal Engine 5 Tutorial: https://www.youtube.com/watch?v=-IM5IE_XiLI (Accessed: 6 Feb 2025).
+
+Unreal Engine 5: How To Recover Files "Could not compile. Try rebuilding from source manually.":  https://dev.epicgames.com/community/learning/tutorials/RedB/unreal-engine-5-how-to-recover-files-could-not-compile-try-rebuilding-from-source-manually (Accessed: 20 Jan 2025).
+
+
 ## Declared Assets
 
-Assets here
-
-The following assets were modified with the use of GPT 4o:
+Meteor hit noise: https://freesound.org/people/SuperSouper/sounds/684987/ (Accessed: 26 Feb 2025)
+Impact circle: https://clipground.com/images/magic-circle-clipart-12.png (Accessed: 22 Feb 2025)
+Crossbow shot sfx: https://freesound.org/people/Lunevix/sounds/246015/ (Accessed: 25 Feb 2025)
+Crossbow model by wolkoed: https://sketchfab.com/3d-models/crossbow-29266724221344da8c37367f90959b81#download (Accessed: 12 Feb 2025)
+Rocks and meteors (Rock Pack Vol 01 by Vampawn): https://www.fab.com/listings/f66023d1-7951-4c62-8ad5-121b4b0df349 (Accessed: 3 March 2025)
 
