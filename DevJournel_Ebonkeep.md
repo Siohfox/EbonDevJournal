@@ -321,12 +321,19 @@ Epic Games (2025c) Behavior Trees in Unreal Engine. Available at: [https://dev.e
 
 Wadstein, M. (2016) WTF Is? AI: Simple Parallel Node in Unreal Engine 4 (UE4). Available at: [https://www.youtube.com/watch?v=idejwkR4Vcc](https://www.youtube.com/watch?v=idejwkR4Vcc) (Accessed: 4 Feb 2025).
 
-Creating visual effects in Niagara: https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine (Accessed: 19 Feb 2025).
+Creating visual effects in Niagara: [https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine](https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine) (Accessed: 19 Feb 2025).
 
-Pitchfork Academy (Youtube) How To Make A Third Person Shooter - Unreal Engine 5 Tutorial: https://www.youtube.com/watch?v=-IM5IE_XiLI (Accessed: 6 Feb 2025).
+Pitchfork Academy (Youtube) How To Make A Third Person Shooter - Unreal Engine 5 Tutorial: [https://www.youtube.com/watch?v=-IM5IE_XiLI](https://www.youtube.com/watch?v=-IM5IE_XiLI) (Accessed: 6 Feb 2025).
 
 Unreal Engine 5: How To Recover Files "Could not compile. Try rebuilding from source manually.":  https://dev.epicgames.com/community/learning/tutorials/RedB/unreal-engine-5-how-to-recover-files-could-not-compile-try-rebuilding-from-source-manually (Accessed: 20 Jan 2025).
 
+Unreal Engine 5 - Official Valley of the Ancient Tech Showcase (IGN): [https://www.youtube.com/watch?v=SeY-ousiCPg](https://www.youtube.com/watch?v=SeY-ousiCPg)  (Accessed: 10 March 2025).
+
+Create Stunning Fire Effects in Unreal Engine 5 with Niagara (UnrealCG): [https://www.youtube.com/watch?v=SeY-ousiCPg](https://www.youtube.com/watch?v=oaaBxBMUGvQ)  (Accessed: 12 March 2025).
+
+Boss shockwave: Magical Shockwave in Unreal Engine Niagara | in 12 minutes (Motion Dreams Youtube): https://www.youtube.com/watch?v=ZAKTxE4VZ1U (Accessed:  20 Feb 2025).
+
+Cool meteor landing particle effect: Ue5 Decal Material Tutorial | Magic circle | Downloadfiles (RainRainFX Youtube): [https://www.youtube.com/watch?v=wsKODsPr3CQ](https://www.youtube.com/watch?v=wsKODsPr3CQ) (Accessed:  29 Jan 2025).
 
 ## Declared Assets
 
