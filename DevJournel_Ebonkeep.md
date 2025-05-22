@@ -210,17 +210,17 @@ As the person in charge of creating the character with shooting mechanics, i dec
 
 In figure F and G, I used a raycast, or a Line trace as it's referred to in Unreal, to trace from the camera to the crosshair. I did this so the player could shoot at the crosshair, and it seemed like the simplest way for me, who has never programmed a shooting mechanic before. After seeing it the ray hit something or not, I would trace another line from the crossbow to the hit point of the crosshair linetrace. This resulted in a crossover point where the two lines meet, and would allow the bullets to come from the crossbow the player held, instead of the center of the screen.
 
-![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting1.png?token=GHSAT0AAAAAADEFH2XWDNUACYWD2T6JLALW2BLR32A)
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting1.png)
 Figure F: A third person view of a shot made, showing the line trace from the crosshair to the hit point
 
-![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting2.png?token=GHSAT0AAAAAADEFH2XX3RATILR7RJZCPDX62BLS6TA)
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/shooting2.png)
 Figure G: An alternate view, to see the line trace from both the weapon and the camera, to decide which point the crossbow should shoot towards
 
 ##### Adding arrow stab
 
 Since we're using a crossbow as our main form of attack, I decided to implement a feature where the arrows appear to stick into walls and targets.
 
-![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/arrow_stab.png?token=GHSAT0AAAAAADEFH2XWVLAQ3M32W4RF25J62BLT5PQ)
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/arrow_stab.png)
 Figure H: An image showing arrows sticking into the wall after implementation.
 
 
@@ -280,7 +280,7 @@ To deepen my understanding, I consulted Unreal Engine's official documentation, 
 
 Through this research, I was able to construct AI behaviors that are both modular and scalable, enhancing the gameplay experience by providing challenging and intelligent adversaries.
 
-![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg?token=GHSAT0AAAAAADEFH2XXJ4VOMRT5G5BULBOY2BLQ3HA)
+![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg)
 
 #### Niagara VFX
 
