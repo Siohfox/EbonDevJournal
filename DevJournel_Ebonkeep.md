@@ -12,9 +12,10 @@ SID: 1911666
 - Github: https://github.com/SenDev2001/ProjectEbonkeep
 - Gameplay video: TBD
 
-# Introduction
-"The Battle of Ebonkeep" is a third person infiltration and boss fighting game where the player must infiltrate a castle known as Ebonkeep, find upgrades and assassinate guards
-before reaching the castle keep and fighting a giant golem boss named "steve (tbd)", they must survive against and defeat the boss to claim victory and win the game.
+# Project Outline
+"The Battle of Ebonkeep" is an immersive third-person action game centered around stealth-based infiltration and intense boss combat. Players take on the role of a skilled assassin tasked with breaching the heavily fortified castle of Ebonkeep—a towering medieval fortress shrouded in darkness and mystery. As they journey deeper into its labyrinthine halls, players must navigate tight corridors, avoid detection, silently eliminate guards, and collect powerful upgrades scattered throughout the environment.
+
+The ultimate goal is to reach the heart of the castle—the Keep—where a formidable final challenge awaits: a colossal, ancient golem known only as "The Fallen One." This massive boss creature serves as the final test of the player's skill, strategy, and resourcefulness. Victory is only achieved by surviving and defeating this fearsome enemy, marking the end of the infiltration and the completion of the mission.
 
 Game features include:
 - Stealth mechanic 
@@ -25,11 +26,18 @@ Game features include:
 - A large castle area to explore and admire
 - High detail and cool effects
 
+The project aims to deliver a compelling and memorable third-person experience that combines the thrill of sneaking through enemy territory with the intensity of a massive boss showdown. At its core, The Battle of Ebonkeep is about the tension, planning, and reward of a successful infiltration culminating in a climactic, high-stakes duel against a powerful foe.
+
+My objective is to design and implement the boss enemy’s artificial intelligence within Unreal Engine 5, utilizing the engine's Behavior Tree and Blackboard systems to create a robust and dynamic AI. This system will allow the boss to perform a variety of autonomous actions, such as adapting to player behavior, executing complex attack patterns, transitioning between different combat phases, and reacting to environmental changes in real-time. The goal is to craft a challenging and engaging encounter that feels intelligent and responsive, enhancing the overall gameplay experience during the climactic boss battle.
+
+My secondary objective is to help achieve a working and functioning game, including player movement, effects and 
+
+
 ### Research
 
 #### Identified resources
 
-As a group, we decided on doing a third person infiltration game focusing on a cool boss fight similar to researched games Elden Ring, Dark Souls and Borderlands.
+As a group, we decided on doing a third person infiltration game focusing on a cool boss fight similar to researched games (Elden Ring, 2022), Dark Souls III (Dark Souls III, 2016) and Borderlands 3 (Borderlands 3 Game, 2019).
 We decided this project would be focused for PC and Steam distribution and use, as it would portray the game the best. 
 
 While I intended to try and make a fast paced game due to my experience with presenting games that had faster experiences generally did better in showcases, the team wanted to introduce a stealth mechanic to the gameplay which was also important to give some AI work to one of my other group team-mates, so I reluctantly agreed. While I still believe it might be better to have a fast rush and infiltrate game, it was okay to compromise and do a 50/50 on combat thrill and stealth game.
@@ -39,7 +47,8 @@ For the engine, we agreed Unreal Engine 5.4 would work the best for us for three
 1. Fantastic visuals and working gameplay out-of-the-box to help speed up the game making process and create better visuals than most other engines at this time (2025)
 2. UE 5.4 Is the most accessable engine, as it is installed on the workstations at the University we intend to work at, and have installed it on our home computers without errors, enabling
 us to both work at home and away on this project.
-3. Unreal's inbuilt animation tools and inbuilt AI programming makes making the core mechanics of the game faster and easier than it would be to create it from scratch on different engines. 
+3. Unreal's inbuilt animation tools and inbuilt AI programming makes making the core mechanics of the game faster and easier than it would be to create it from scratch on different engines.
+(TechCrunch, Coldewey, 2022)
 
 ##### UE 5.4 Downsides:
 The downsides to working in unreal include the unfortunate fact that a lot of the assets in Fab, Quixel and by the Unreal Engine developers are not free and easily accessable (anymore),
@@ -47,7 +56,7 @@ this means that most assets will have to be made by our small team, introducing 
 
 Another downside, is that installing a lot of the requirements for a C++ compatible Unreal project requires a lot of installed files, especially on windows computers, and as such, many problems
 are caused in the initial installation and start up processes, with some people being unable to open the project for various reasons and the engine often complaining about needing to be rebuilt.
-
+(Why Is Unreal Engine 5 Criticized, and Is It Really That Bad?, s.d.)
 
 ##### Other resources
 
@@ -79,7 +88,7 @@ This means I would need to learn the entirety of Unreal's basic UI, programming 
 ### Sources
 
 #### Unreal Basics
-I used some videos on how to start creating games with Unreal Engine 5.4. Generally I found, most tutorials for Unreal Engine 5.* applied to almost all version of Unreal Engine 5, which was particularly useful. I also found that since Unreal 5 is a fairly recent development to Unreal, there was a lot of new and up to date learning material that applied to early development of the engine, which meant information I found about Unreal 5 was almost always up-to-date and realistic, making the learning experience surprisingly easy and pleasant. This did mean, however, that not a lot of material existed yet, so the stuff that did exist was fairly limited. In figure B below, I used this video to learn the basics of Unreal Engine 5 itself and create my first games using the engine. 
+I used some videos on how to start creating games with Unreal Engine 5.4 such as Unreal Sensei's beginner tutorial (How to Create a Game in Unreal Engine 5 - UE5 Beginner Tutorial, 2023). Generally I found, most tutorials for Unreal Engine 5.* applied to almost all version of Unreal Engine 5, which was particularly useful. I also found that since Unreal 5 is a fairly recent development to Unreal, there was a lot of new and up to date learning material that applied to early development of the engine, which meant information I found about Unreal 5 was almost always up-to-date and realistic, making the learning experience surprisingly easy and pleasant. This did mean, however, that not a lot of material existed yet, so the stuff that did exist was fairly limited. In figure B below, I used this video to learn the basics of Unreal Engine 5 itself and create my first games using the engine. 
 
 [![A video](https://img.youtube.com/vi/1XjgLKrb4_M/0.jpg)](https://www.youtube.com/watch?v=1XjgLKrb4_M)
 Figure B: A video on the basics of creating a game in Unreal by Unreal Sensei, a Youtuber who creates guides for Unreal Engine. ((2023) YouTube. Available at: https://www.youtube.com/watch?v=1XjgLKrb4_M (Accessed: 01 January 2025). 
@@ -281,6 +290,7 @@ To deepen my understanding, I consulted Unreal Engine's official documentation, 
 Through this research, I was able to construct AI behaviors that are both modular and scalable, enhancing the gameplay experience by providing challenging and intelligent adversaries.
 
 ![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg)
+Figure I: A figure of the behaviour tree in Unreal used by the main Boss
 
 #### Niagara VFX
 
@@ -313,6 +323,18 @@ I would love to use a better movement system, and allocate more time into the ch
 
 ## Bibliography
 
+FromSoftware, Bandai Namco Entertainment (2016) Dark Souls III.
+
+Gearbox Software, 2k (2019) Borderlands 3.
+
+FromSoftware, Bandai Namco Entertainment (2022) Elden Ring.
+
+Coldewey, D. (2022) Why should you care about Epic’s Unreal Engine 5? At: https://techcrunch.com/2022/04/11/what-is-epic-games-unreal-5/ (Accessed: 14 Feb 2025).
+
+Why Is Unreal Engine 5 Criticized, and Is It Really That Bad? (s.d.) At: https://vgtimes.com/articles/121246-why-is-unreal-engine-5-criticized-and-is-it-really-that-bad.html (Accessed: 14 Feb 2025).
+
+How to Create a Game in Unreal Engine 5 - UE5 Beginner Tutorial (2023) At: https://www.youtube.com/watch?v=1XjgLKrb4_M (Accessed: 15 Jan 2025).
+
 Epic Games (2025a) Unreal Engine Behavior Tree Node Reference: Composites. Available at: [https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-behavior-tree-node-reference-composites](https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-behavior-tree-node-reference-composites) (Accessed: 24 Jan 2025).
 
 Epic Games (2025b) Behavior Tree in Unreal Engine - Overview. Available at: [https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-tree-in-unreal-engine---overview](https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-tree-in-unreal-engine---overview) (Accessed: 25 Jan 2025).
@@ -343,3 +365,5 @@ Crossbow shot sfx: https://freesound.org/people/Lunevix/sounds/246015/ (Accessed
 Crossbow model by wolkoed: https://sketchfab.com/3d-models/crossbow-29266724221344da8c37367f90959b81#download (Accessed: 12 Feb 2025)
 Rocks and meteors (Rock Pack Vol 01 by Vampawn): https://www.fab.com/listings/f66023d1-7951-4c62-8ad5-121b4b0df349 (Accessed: 3 March 2025)
 
+The following assets were assisted or edited by GPT 4o:
+Development Journal
