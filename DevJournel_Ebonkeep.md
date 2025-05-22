@@ -304,7 +304,7 @@ Using tutorials from SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023), I was 
 Figure J: A Niagara shockwave particle that I implemented following the method used by SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023)
 
 An early example of the boss using the shockwave is below:
-![ShockwaveFx here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/raw/refs/heads/main/Images/BossShockwaveNiagara.mp4)
+[Watch the Boss Shockwave Niagara video](https://github.com/Siohfox/EbonDevJournal/blob/main/Images/BossShockwaveNiagara.mp4)
 
 ##### Meteors
 
