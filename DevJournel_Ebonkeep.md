@@ -291,8 +291,14 @@ Through this research, I was able to construct AI behaviors that are both modula
 ![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg)
 Figure I: A figure of the behaviour tree in Unreal used by the main Boss
 
-A short video here demonstrates the unpolished initial concept boss fight, showcasing the AI working and some simple mechanics, using a placeholder boss.
+
+To create more depth to the boss, I added a mechanic where if it reached 50% of its hp, it would switch to a "rage" mode. This meant I had to broadcast the hp that the BP_Boss blueprint held to the blackboard, to allow the behaviour tree to use decorators indicating when it reached under half health, it should switch paths in the behaviour tree. This is demonstrated in the early development video below, where when the boss reaches half health it recognises, and plays a rage animation to indicate it is in rage mode, and that the AI is working. This will later be refined for the final release.
+
 [Watch the Boss fight video](https://github.com/Siohfox/EbonDevJournal/blob/main/Images/Firstbossfight%20TreeNoAudio.mp4)
+
+
+A short video here demonstrates the unpolished initial concept boss fight, showcasing the AI working and some simple mechanics, using a placeholder boss.
+[Watch the video showcasing the half hp rage AI here](https://github.com/Siohfox/EbonDevJournal/blob/main/Images/Video_Blackboard_HP_Link.mp4)
 
 #### Niagara VFX
 
