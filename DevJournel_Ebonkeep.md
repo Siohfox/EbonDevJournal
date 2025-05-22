@@ -212,8 +212,6 @@ Solution: We had someone who was paying for the LFS set it up, and found a solut
 Another issue we had was that Unreal 5.4 had many issues with loading C++ projects on various devices. It was difficult to figure out what exactly it wanted, and it kept saying "Cannot build source files, try rebuilding manually". In the end, we found a page (Unreal Engine 5: How To Recover Files "Could not compile. Try rebuilding from source manually.")
 
 
-
-
 ##### Creating the shooting
 As the person in charge of creating the character with shooting mechanics, i decided to use a line trace to trace where the player would shoot.
 
@@ -232,6 +230,7 @@ Since we're using a crossbow as our main form of attack, I decided to implement 
 ![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/arrow_stab.png)
 Figure H: An image showing arrows sticking into the wall after implementation.
 
+I used animations from the Animation Starter Pack (Fab, s.d.), to create the animation blueprint for the character, allowing for a third person moving shooter.
 
 ##### Feedback
 
@@ -294,11 +293,33 @@ Figure I: A figure of the behaviour tree in Unreal used by the main Boss
 
 #### Niagara VFX
 
-As part of our group project, I took on the task of creating visual effects using Unreal Engine's Niagara system. Being new to Niagara, I began by enabling the plugin in Unreal Engine 5.4 and exploring the basic interface. I found the official documentation particularly helpful, especially the Quick Start guide, which walked me through creating simple effects like smoke and sparks.
+As part of our group project, I took on the task of creating visual effects using Unreal Engine's Niagara system to enhance the game's feel. Being new to Niagara, I began by enabling the plugin in Unreal Engine 5.4 and exploring the basic interface. I found the official documentation particularly helpful, especially the Quick Start guide, which walked me through creating simple effects like smoke and sparks.
 
 I ended up using niagara for a few parts of the project, namely the boss slam effects, arena particle effects, and a test fire particle which was not implemented in the end demo.
 
-![ShockwaveFx here]()
+##### Shockwave
+Using tutorials from SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023), I was able to create an awesome shockwave particle effect for the boss' slam attack.
+
+![ShockwaveFx here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/ShockwaveFX.jpg)
+Figure J: A Niagara shockwave particle that I implemented following the method used by SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023)
+
+##### Meteors
+
+One of the bosses attacks involved hurling meteors from the sky. To make them more meteor like, i used references from UnrealCG's tutorial on Youtube (Create Stunning Fire Effects in Unreal Engine 5 with Niagara, 2023) to help create a static mesh wrap around for the meteors, making them look like they're on fire. Adding to that, I added some red particles to make it look like the meteors are flaming.
+
+![FX here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/MeteorNiagaraFX.gif)
+
+Figure K: The final look of a meteor in the game made by myself, used by one of the bosses attacks when it is enraged (under half health)
+
+##### Arena Ambience
+
+For the arena, I felt it needed some ambience, so I added some basic fog particles employing some of Unreal's default Volumetric fog upon Niagara FX particles, which covered the whole arena. This created a look of fogginess to the arena, giving it some depth. Additionally, since the boss is vaguely firey, I added some hanging particles which look a bit like embers, to further enhance the look of the arena, which can be shown in the figures below.
+
+![FX here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/BeforeFogFX.png)
+Figure L: An example of what the arena looked like before the particles
+
+![FX here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/AfterFogFX.png)
+Figure M: An example of what the arena looked like after the particles
 
 
 ## Critical Reflection
@@ -314,6 +335,8 @@ Integrating the AI Perception system further enriched the AI's responsiveness. B
 However, not all aspects proceeded smoothly. The initial setup of the AI systems was time-consuming, with challenges arising from understanding the intricacies of Behavior Trees and Perception components. Debugging AI behaviors required a lot of attention, as minor misconfigurations could lead to erratic NPC actions. Additionally, while the visual scripting through Blueprints was powerful, it occasionally became complex to manage, especially when dealing with extensive AI logic.
 
 A very important reflection was that the movement system used was very janky, and is not something i'd recommend. We made the character move a bit like a Fortnite third person shooter character, and it just feels bad to use. If I had more time, i would love to introduce a proper movement system to the game.
+
+I also want to critise my time management, and effort for the development journal. I was unable to include all of the parts I put into the project, as much of it was small tweaks and particle effects. 
 
 ### What would you do differently next time?
 
@@ -356,6 +379,11 @@ Create Stunning Fire Effects in Unreal Engine 5 with Niagara (UnrealCG): [https:
 Boss shockwave: Magical Shockwave in Unreal Engine Niagara | in 12 minutes (Motion Dreams Youtube): https://www.youtube.com/watch?v=ZAKTxE4VZ1U (Accessed:  20 Feb 2025).
 
 Cool meteor landing particle effect: Ue5 Decal Material Tutorial | Magic circle | Downloadfiles (RainRainFX Youtube): [https://www.youtube.com/watch?v=wsKODsPr3CQ](https://www.youtube.com/watch?v=wsKODsPr3CQ) (Accessed:  29 Jan 2025).
+
+UE5 Particle ShockWave Tutorial, SoftTofuVFX, Youtube (2023) At: [https://www.youtube.com/watch?v=3AJBfDuUEXc](https://www.youtube.com/watch?v=3AJBfDuUEXc) (Accessed:  19 Feb 2025).
+
+Fab (s.d.) At: https://www.fab.com/listings/98ff449d-79db-4f54-9303-75486c4fb9d9 (Accessed:  1 Mar 2025).
+
 
 ## Declared Assets
 
