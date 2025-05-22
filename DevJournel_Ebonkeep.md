@@ -20,7 +20,7 @@ The ultimate goal is to reach the heart of the castle—the Keep—where a formi
 Game features include:
 - Stealth mechanic 
 - Crossbow third person shooting and aiming
-- Guards and NPC ai
+- Guards and NPC AI
 - A huge boss fight with unique attacks
 - Upgrades and power ups
 - A large castle area to explore and admire
@@ -63,7 +63,7 @@ are caused in the initial installation and start up processes, with some people 
 For initial drafting, we made some quick sketches and found some reference images as to how it should look:
 
 <img src="https://cdnb.artstation.com/p/assets/images/images/030/310/069/large/tobias-quintella-15-tobias-quintella-01.jpg?1600216345" alt="Ref Image Here" width="1000"/>
-Figure A: A reference image we will loosely base the castle design around (Quintella, T. (no date) Tobias Quintella, Medieval castle design concept. Available at: https://tbquintella.artstation.com/ (Accessed: 16 February 2025). )
+Figure 1`: A reference image we will loosely base the castle design around (Quintella, T. (no date) Tobias Quintella, Medieval castle design concept. Available at: https://tbquintella.artstation.com/ (Accessed: 16 February 2025). )
 
 ##### Resource Gathering
 
@@ -302,6 +302,9 @@ Using tutorials from SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023), I was 
 
 ![ShockwaveFx here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/ShockwaveFX.jpg)
 Figure J: A Niagara shockwave particle that I implemented following the method used by SoftTofuVFX (UE5 Particle ShockWave Tutorial, 2023)
+
+An early example of the boss using the shockwave is below:
+![ShockwaveFx here](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/raw/refs/heads/main/Images/BossShockwaveNiagara.mp4)
 
 ##### Meteors
 
