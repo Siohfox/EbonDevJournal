@@ -291,6 +291,9 @@ Through this research, I was able to construct AI behaviors that are both modula
 ![Initial Image](https://raw.githubusercontent.com/Siohfox/EbonDevJournal/refs/heads/main/Images/tree.jpg)
 Figure I: A figure of the behaviour tree in Unreal used by the main Boss
 
+A short video here demonstrates the unpolished initial concept boss fight, showcasing the AI working and some simple mechanics, using a placeholder boss.
+[Watch the Boss fight video](https://github.com/Siohfox/EbonDevJournal/blob/main/Images/Firstbossfight%20TreeNoAudio.mp4)
+
 #### Niagara VFX
 
 As part of our group project, I took on the task of creating visual effects using Unreal Engine's Niagara system to enhance the game's feel. Being new to Niagara, I began by enabling the plugin in Unreal Engine 5.4 and exploring the basic interface. I found the official documentation particularly helpful, especially the Quick Start guide, which walked me through creating simple effects like smoke and sparks.
